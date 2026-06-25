@@ -2,6 +2,8 @@
 
 An AI-powered MERN stack application that generates personalized interview reports based on a candidate's resume (or self-description) and job description.
 
+Generates match scores, skill-gap analysis, personalized roadmaps, and interview questions using AI.
+
 ## Tech Stack
 
 ### Frontend
@@ -34,41 +36,34 @@ cd Gen-Ai-Full-Stack-Project
 
 ### Install Dependencies
 
-Backend:
+#### Backend
 
 ```bash
 cd Backend
 npm install
 ```
 
-Frontend:
+#### Frontend
 
 ```bash
 cd Frontend
 npm install
 ```
 
-### Configure Environment Variables
+### Environment Variables
 
-Create a `.env` file inside the Backend folder and add:
-
-```env
-PORT=3000
-MONGODB_URI=your_mongodb_connection_string
-GROQ_API_KEY=your_groq_api_key
-JWT_SECRET=your_jwt_secret
-```
+Refer to `.env.example` for the required environment variables.
 
 ### Run the Application
 
-Start Backend:
+#### Start Backend
 
 ```bash
 cd Backend
 npm run dev
 ```
 
-Start Frontend:
+#### Start Frontend
 
 ```bash
 cd Frontend
@@ -89,19 +84,12 @@ npm run dev
 
 ![Interview Report](screenshots/InterviewReport.png)
 
-### Roadmap
-
-![Roadmap](screenshots/Roadmap.png)
-
 ### My Reports
 
 ![My Reports](screenshots/MyReports.png)
 
-### My Profile
-
-![My Profile](screenshots/MyProfile.png)
-
 ## Author
 
-**Maahi**
+**Mamta.webdev**
 
+Full-Stack Developer | React.js | Node.js | MongoDB
