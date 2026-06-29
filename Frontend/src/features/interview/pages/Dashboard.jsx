@@ -1,47 +1,3 @@
-// import { useNavigate } from "react-router"
-
-// export default function Dashboard(){
-
-// const navigate = useNavigate()
-
-// return(
-
-//     <div>
-    
-//     <h1>
-//     Welcome Back 👋
-//     </h1>
-    
-//     <button
-//     onClick={()=>{
-//     navigate("/")
-//     }}
-//     >
-//     Generate Interview Report
-//     </button>
-    
-    
-//     <button
-//     onClick={()=>{
-//     navigate("/reports")
-//     }}
-//     >
-//     My Reports
-//     </button>
-    
-    
-//     <button onClick={()=>{
-//      localStorage.removeItem("token")
-//      navigate("/login")
-// }}>
-//     Logout
-//     </button>
-    
-    
-//     </div>
-    
-//     )}    
-
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { getAllInterviewReports } from "./services/interview.api"; 
@@ -162,7 +118,6 @@ const stats = [
         {/* Top Navbar */}
         <header style={styles.topbar}>
             <div style={styles.topbarTitle}>
-                  {/* <h1 style={styles.topHeading}>Dashboard</h1> */}
                   <h1 style={styles.topHeading}>
                         📊 Dashboard
                    </h1>
@@ -224,41 +179,6 @@ const stats = [
           </section>
 
           {/* Recent Reports */}
-          {/* <section style={styles.recentSection}>
-            <div style={styles.recentHeader}>
-              <h2 style={styles.sectionTitle}>Recent Reports</h2>
-              <button style={styles.viewAllBtn} onClick={() => navigate("/reports")}>View all →</button>
-            </div>
-
-            <div style={styles.reportsList}>
-              {recentReports.map((r) => (
-                <div key={r.id} style={styles.reportRow}>
-                  <div style={styles.reportIconBox}>
-                    <span style={{ fontSize: 18 }}>📋</span>
-                  </div>
-                  <div style={styles.reportInfo}>
-                    <div style={styles.reportTitle}>{r.title}</div>
-                    <div style={styles.reportDate}>{r.date}</div>
-                  </div>
-                  <div
-                    style={{
-                      ...styles.reportScore,
-                      color: r.scoreColor,
-                    }}
-                  >
-                    {r.score}%
-                  </div>
-                  <div style={styles.reportActions}>
-                    <button style={styles.actionBtn}>View Report</button>
-                    <button style={styles.actionBtnOutline}>
-                      ⬇ Download PDF
-                    </button>
-                    <button style={styles.moreBtn}>⋯</button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section> */}
 
           <section style={styles.recentSection}>
   <div style={styles.recentHeader}>
@@ -463,15 +383,6 @@ const styles = {
     height: "72px",
     zIndex: 10,
   },
-//   topbarTitle: {
-//   fontSize: "16px",
-//   fontWeight: "900",
-//   WebkitBackgroundClip: "text",
-//   WebkitTextFillColor: "transparent",
-//   letterSpacing: "-1px",
-//   cursor: "pointer",
-//   transition: "all 0.3s ease",
-// },
   topHeading:{
   fontSize: "24px",
   fontWeight: "900",

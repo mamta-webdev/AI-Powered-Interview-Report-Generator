@@ -13,21 +13,6 @@ const login = () => {
   const [ email, setEmail ] = useState("")
   const [ password, setPassword ] = useState("")
 
-  // const handleSubmit = async (e)=>{
-  //   e.preventDefault()
-    
-  //   if (!email || !password) {
-  //       alert("Please fill all fields");
-  //       return;
-  //   }
-  //   await handleLogin({ email, password })
-
-  //   if (res?.success) {
-  //   navigate("/")
-  // } else {
-  //   alert(res?.message || "Login failed")
-  // }
-  // }
   const handleSubmit = async (e) => {
     e.preventDefault();
 

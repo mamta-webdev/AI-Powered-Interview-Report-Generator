@@ -52,9 +52,6 @@ const Home = () => {
   if(isGenerating){
     return (
       
-      // <main  style={{color:"red", backgroundColor:"purple"}}className="loading-screen">
-      //   <h1>Loading you interview plan....</h1>
-      // </main>
       <main
   className="loading-screen"
   style={{

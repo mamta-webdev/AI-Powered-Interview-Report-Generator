@@ -541,9 +541,6 @@ const s = {
     padding: "28px 28px 40px",
     minHeight: "calc(100vh - 57px)",
   },
-  // pageTitleRow: {
-  //   marginBottom: 11,
-  // },
   pageTitleRow: {
   display: "flex",
   flexDirection: "column",

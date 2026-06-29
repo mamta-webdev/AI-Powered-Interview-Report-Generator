@@ -1,67 +1,3 @@
-// import { useNavigate } from "react-router"
-
-// export default function Myreports(){
-
-// const navigate = useNavigate()
-
-// const reports = [
-// {
-// id:1,
-// role:"Frontend Developer"
-// },
-// {
-// id:2,
-// role:"React Developer"
-// },
-// {
-// id:3,
-// role:"Node Developer"
-// }
-// ]
-
-// return(
-
-// <div>
-
-// <h1>
-// My Reports
-// </h1>
-
-
-// {reports.map((report)=>(
-
-// <div
-// key={report.id}
-// style={{
-// border:"1px solid #ddd",
-// padding:"20px",
-// marginBottom:"20px",
-// borderRadius:"12px"
-// }}
-// >
-
-// <h3>
-// {report.role}
-// </h3>
-
-// <button
-// onClick={()=>{
-// navigate(`/interview/${report.id}`)
-// }}
-// >
-// View Report
-// </button>
-
-// </div>
-
-// ))}
-
-// </div>
-
-// )
-
-// }
-
 import { useState, useMemo } from "react";
 import { useNavigate } from "react-router";
 import { getAllInterviewReports } from "./services/interview.api";
@@ -239,12 +175,6 @@ export default function Reports() {
           {/* Table */}
           <div style={styles.tableCard}>
             {paginated.length === 0 ? (
-              // <div style={styles.emptyState}>
-              //   <div style={{ fontSize: 36, marginBottom: 10 }}>📭</div>
-              //   <p style={{ margin: 0, color: "#6B7280", fontSize: 14 }}>
-              //     No reports match your search.
-              //   </p>
-              // </div>
               <div style={styles.emptyState}>
                     <div style={styles.emptyIcon}>📊</div>
 
@@ -482,22 +412,8 @@ const styles = {
     fontWeight: 600, fontSize: 14,
   },
   userName: { fontSize: 13, fontWeight: 600, color: "#111827" },
-  // userBadge: {
-  //   fontSize: 10, color: "#7C3AED", fontWeight: 600,
-  //   background: "#EDE9FE", borderRadius: 4, padding: "1px 5px",
-  // },
   content: { padding: "28px", display: "flex", flexDirection: "column", gap: 20 },
-  // pageHeader: {
-  //   display: "flex",
-  //   justifyContent: "space-between",
-  //   alignItems: "center",
-  // },
-//   pageHeader: {
-//   display: "flex",
-//   justifyContent: "space-between",
-//   alignItems: "center",
-//   marginBottom: "24px",
-// },
+ 
 pageHeader: {
   display: "flex",
   justifyContent: "space-between",
@@ -505,8 +421,6 @@ pageHeader: {
   marginBottom: "24px",
   width: "100%",
 },
-  // pageTitle: { fontSize: 20, fontWeight: 700, margin: "0 0 4px", color: "#111827" },
-  // pageSub: { fontSize: 13, color: "#6B7280", margin: 0 },
   primaryBtn: {
     background: "transparent",
     color: "#F8FAFC",
@@ -518,33 +432,20 @@ pageHeader: {
     cursor: "pointer",
     transition: "all 0.3s ease",
   },
-
-  pageTitle: {
-  fontSize: "32px",
-  fontWeight: "700",
+pageTitle: {
+  fontSize: "36px",
+  fontWeight: 800,
   color: "#fff",
-  marginBottom: "6px",
 },
 
 pageSub: {
   fontSize: "14px",
   color: "#94A3B8",
 },
-  // filterRow: {
-  //   display: "flex",
-  //   justifyContent: "space-between",
-  //   alignItems: "center",
-  //   gap: 12,
-  // },
-  filterRow: {
+filterRow: {
   display: "flex",
-  justifyContent: "space-between",
   alignItems: "center",
-  background: "#1E293B",
-  padding: "16px",
-  gap:"16px",
-  borderRadius: "12px",
-  border: "1px solid #334155",
+  gap: "16px",
   marginBottom: "24px",
 },
   searchWrap: {
@@ -578,17 +479,12 @@ pageSub: {
     cursor: "pointer",
     outline: "none",
   },
-  // tableCard: {
-  //   background: "#fff",
-  //   borderRadius: 14,
-  //   border: "1px solid #E5E7EB",
-  //   overflow: "hidden",
-  // },
   tableCard: {
   background: "#1E293B",
   borderRadius: "16px",
   overflow: "hidden",
   border: "1px solid #334155",
+  minHeight: "350px",
 },
   tableRow: {
     display: "flex",
@@ -654,11 +550,6 @@ pageSub: {
     cursor: "pointer",
     color: "#6B7280",
   },
-  // emptyState: {
-  //   padding: "52px 0",
-  //   textAlign: "center",
-  //   color: "#9CA3AF",
-  // },
   emptyState: {
   display: "flex",
   flexDirection: "column",
