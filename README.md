@@ -4,6 +4,10 @@ An AI-powered MERN stack application that generates personalized interview repor
 
 Generates match scores, skill-gap analysis, personalized roadmaps, and interview questions using AI.
 
+## 🔗 Live Demo
+
+🌍 https://ai-powered-interview-report-generator-1.onrender.com
+
 ## Tech Stack
 
 ### Frontend
@@ -92,4 +96,4 @@ npm run dev
 
 **Mamta.webdev**
 
-Full-Stack Developer | React.js | Node.js | MongoDB
+Full-Stack Developer
