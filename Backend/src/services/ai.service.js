@@ -110,7 +110,7 @@ Self Description: ${selfDescription}
 Job Description: ${jobDescription}
 `
     const response = await groq.chat.completions.create({
-        model: "llama-3.1-8b-instant"
+        model: "llama-3.1-8b-instant",
         messages: [
               {
               role: "user",
