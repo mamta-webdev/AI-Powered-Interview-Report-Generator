@@ -116,14 +116,11 @@ export default function Reports() {
 
           <div style={styles.topbarRight}>
             <button style={styles.iconBtn}>🔔</button>
-            <div style={styles.userChip}>
-               {user?.username?.charAt(0).toUpperCase()}
-              <div>
-                <div style={styles.userName}> {user?.username}a</div>
-              </div>
-              <span style={{ color: "#9CA3AF", fontSize: 12 }}>▾</span>
+            <div style={styles.avatarCircle}>
+               {user?.username?.slice(0,2).toUpperCase() }
+                </div>
+              <span style={{ color: "#9CA3AF", fontSize: 14 }}>▾</span>
             </div>
-          </div>
         </header>
 
         {/* Content */}
@@ -405,16 +402,16 @@ const styles = {
     width: "100%",
   },
   topbarRight: { display: "flex", alignItems: "center", gap: 6 },
-  iconBtn: { background: "none", border: "none", fontSize: 14, cursor: "pointer", padding: 4 },
-  userChip: { display: "flex", alignItems: "center", gap: 8, cursor: "pointer" },
+  iconBtn: { background: "none", border: "none", fontSize: 16, cursor: "pointer", padding: 2 },
+  userChip: { display: "flex", alignItems: "center",gap:5, cursor: "pointer",fontWeight: 500 },
   avatarCircle: {
     width: 34, height: 34, borderRadius: "50%",
     background: "#7C3AED", color: "#fff",
     display: "flex", alignItems: "center", justifyContent: "center",
     fontWeight: 600, fontSize: 14,
   },
-  userName: { fontSize: 13, fontWeight: 600, color: "#111827" },
-  content: { padding: "28px", display: "flex", flexDirection: "column", gap: 20 },
+  userName: { fontSize: 15, fontWeight: 800, color: "#b40f6a" },
+  content: { padding: "28px", display: "flex", flexDirection: "column" },
  
 pageHeader: {
   display: "flex",
