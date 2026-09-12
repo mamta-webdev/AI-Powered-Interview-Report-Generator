@@ -8,7 +8,6 @@ const NAV_LINKS = [
   { label: "Generate Report", path: "/", icon: "ti-sparkles" },
   { label: "My Reports", path: "/reports", icon: "ti-file-description" },
   { label: "Profile", path: "/profile", icon: "ti-user" },
-  { label: "Settings", path: "/settings", icon: "ti-settings" },
 ];
 
 function scoreStyle(score) {

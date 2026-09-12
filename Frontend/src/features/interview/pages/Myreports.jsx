@@ -19,7 +19,6 @@ const sidebarLinks = [
   { icon: "⊕", label: "Generate Report", path: "/" },
   { icon: "☰", label: "My Reports", path: "/reports", active: true },
   { icon: "◯", label: "Profile", path: "/profile" },
-  { icon: "⚙", label: "Settings", path: "/settings" },
 ];
 
 export default function Reports() {
