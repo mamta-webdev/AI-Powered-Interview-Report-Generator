@@ -26,7 +26,7 @@ export default function Reports() {
   const { getResumePdf } = useInterview();
   const [reports, setReports] = useState([]);
   const [search, setSearch] = useState("");
-  const [roleFilter, setRoleFilter] = useState("All Jobs");
+  const [roleFilter, setRoleFilter] = useState("All JIobs");
   const [sortOrder, setSortOrder] = useState("Latest First");
   const [page, setPage] = useState(1);
 
@@ -115,9 +115,9 @@ export default function Reports() {
           <div style={styles.topbarRight}>
             <button style={styles.iconBtn}>🔔</button>
             <div style={styles.userChip}>
-              <div style={styles.avatarCircle}>M</div>
+              <div style={styles.avatarCircle}>{user.avatar}</div>
               <div>
-                <div style={styles.userName}>Mahi</div>
+                <div style={styles.userName}>{user.name}</div>
               </div>
               <span style={{ color: "#9CA3AF", fontSize: 12 }}>▾</span>
             </div>
