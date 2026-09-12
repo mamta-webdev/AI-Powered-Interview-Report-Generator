@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { getAllInterviewReports } from "./services/interview.api";
 import { useEffect } from "react";
 import { useInterview } from "../../interview/hooks/useInterview"
+import { useAuth} from "../../auth/hooks/use.Auth"
 
 
 const PAGE_SIZE = 4;
@@ -24,9 +25,10 @@ const sidebarLinks = [
 export default function Reports() {
   const navigate = useNavigate();
   const { getResumePdf } = useInterview();
+  const { user } = useAuth();
   const [reports, setReports] = useState([]);
   const [search, setSearch] = useState("");
-  const [roleFilter, setRoleFilter] = useState("All JIobs");
+  const [roleFilter, setRoleFilter] = useState("All Jobs");
   const [sortOrder, setSortOrder] = useState("Latest First");
   const [page, setPage] = useState(1);
 
@@ -115,9 +117,9 @@ export default function Reports() {
           <div style={styles.topbarRight}>
             <button style={styles.iconBtn}>🔔</button>
             <div style={styles.userChip}>
-              <div style={styles.avatarCircle}>{userName.charAt(0)}</div>
+               {user?.username?.charAt(0).toUpperCase()}
               <div>
-                <div style={styles.userName}>{userName}</div>
+                <div style={styles.userName}> {user?.username}a</div>
               </div>
               <span style={{ color: "#9CA3AF", fontSize: 12 }}>▾</span>
             </div>
