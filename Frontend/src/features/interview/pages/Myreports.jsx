@@ -115,9 +115,9 @@ export default function Reports() {
           <div style={styles.topbarRight}>
             <button style={styles.iconBtn}>🔔</button>
             <div style={styles.userChip}>
-              <div style={styles.avatarCircle}>{user.avatar}</div>
+              <div style={styles.avatarCircle}>{userName.charAt(0)}</div>
               <div>
-                <div style={styles.userName}>{user.name}</div>
+                <div style={styles.userName}>{userName}</div>
               </div>
               <span style={{ color: "#9CA3AF", fontSize: 12 }}>▾</span>
             </div>
