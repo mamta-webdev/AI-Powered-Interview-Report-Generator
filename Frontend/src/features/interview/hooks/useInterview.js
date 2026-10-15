@@ -7,7 +7,6 @@ import { useParams } from "react-router"
 export const useInterview = () =>{
     const context = useContext(InterviewContext)
     const { interviewId } = useParams()
-    console.log("interviewId =", interviewId)
 
     if(!context){
         throw new Error("useInterview must be usedd within an InterviewProvider")
@@ -25,7 +24,6 @@ export const useInterview = () =>{
             setReport(response.interviewReport)
         }catch(err){
             const message = err?.response?.data?.error || err?.response?.data?.message || err.message
-            console.log("Generate report failed:", message)
             throw new Error(message)
         }finally{
             setLoading(false)
@@ -39,7 +37,6 @@ export const useInterview = () =>{
         let response = null
         try{
             response = await getInterviewReportById(interviewId)
-            console.log("FULL API RESPONSE:", response)
             setReport(response?.interviewReport)
         }catch(err){
             console.log(err)
@@ -54,10 +51,9 @@ export const useInterview = () =>{
         let response = null
         try{
             response = await getAllInterviewReports()
-             console.log("API RESPONSE:", response)
             setReports(response.interviewReports)
         }catch(err){
-            console.log(err)
+            // console.log(err)
         }finally{
             setLoading(false)
         }
@@ -65,7 +61,6 @@ export const useInterview = () =>{
     }
 
     const getResumePdf = async ({ interviewReportId })=>{
-        console.log("interviewReportId =", interviewReportId)
         setLoading(true)
         let response = null
         try{
@@ -84,12 +79,10 @@ export const useInterview = () =>{
         }
     }
     useEffect(()=>{
-        console.log("INTERVIEW ID:", interviewId)
         if(interviewId){
             console.log("CALLING GET REPORT")
             getReportById(interviewId)
         }else{
-            console.log("NO INTERVIEW ID")
             getReports()
         }
     }, [interviewId])
