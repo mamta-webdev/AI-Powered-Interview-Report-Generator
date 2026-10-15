@@ -51,7 +51,7 @@ async function generateInterviewReportController(req,res){
             })
         }
         resumeContent = await extractPdfTextFromBuffer(req.file.buffer)
-        console.log("EXTRACTED RESUME TEXT:\n", resumeContent)
+        // console.log("EXTRACTED RESUME TEXT:\n", resumeContent)
     }
 
     if (!resumeContent && !selfDescription) {
@@ -123,12 +123,12 @@ async function getInterviewReportByIdController(req,res){
  * @description controller to get all interview reports of logged in user
  */
 async function getAllInterviewReportsController(req,res){
-    console.log("req.user =", req.user)
-    console.log("req.user.id =", req.user.id)
-    console.log("req.user._id =", req.user._id)
+    // console.log("req.user =", req.user)
+    // console.log("req.user.id =", req.user.id)
+    // console.log("req.user._id =", req.user._id)
     const interviewReports = await interviewReportModel.find({ user: req.user.id}).sort({ createdAt:-1}).select("-resume -selfDescription -jobDescription -_v -technicalQuestions -behaviouralQuestions -preparationPlan")
 
-     console.log("Reports Found:", interviewReports.length)
+     // console.log("Reports Found:", interviewReports.length)
 
     res.status(200).json({
         message:"Interview reports fetched successfully",
