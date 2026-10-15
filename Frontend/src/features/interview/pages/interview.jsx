@@ -33,9 +33,6 @@ const Interview = () => {
       tasks: item.tasks,
     }))
   }, [activeSection,report])
-
-  console.log("REPORT:", report)
-  console.log("LOADING:", loading)
   if(loading || !report){
     return(
       <main className="loading-screen">
