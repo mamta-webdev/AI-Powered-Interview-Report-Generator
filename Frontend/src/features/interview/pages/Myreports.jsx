@@ -35,12 +35,9 @@ export default function Reports() {
   const fetchReports = async () => {
     try {
       const data = await getAllInterviewReports();
-
-      console.log("REPORTS =", data);
-
       setReports(data.interviewReports || []);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
