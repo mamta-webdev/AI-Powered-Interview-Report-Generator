@@ -15,8 +15,6 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("SUBMIT CLICKED");
-    console.log({ username, email, password });
 
 
     if (!username || !email || !password) {
