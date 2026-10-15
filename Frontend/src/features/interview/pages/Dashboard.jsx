@@ -66,12 +66,9 @@ const stats = [
   const fetchReports = async () => {
     try {
       const data = await getAllInterviewReports();
-
-      console.log(data);
-
       setReports(data.interviewReports || []);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
