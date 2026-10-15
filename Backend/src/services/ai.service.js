@@ -235,7 +235,7 @@ ${jobDescription}
     `;
 
     const response = await groq.chat.completions.create({
-      model: "llama-3.1-8b-instant",
+      model: "openai/gpt-oss-120b",
       temperature: 0.2,
       messages: [
         {
