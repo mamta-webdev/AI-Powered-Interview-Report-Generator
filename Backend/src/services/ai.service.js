@@ -110,13 +110,17 @@ Self Description: ${selfDescription}
 Job Description: ${jobDescription}
 `
     const response = await groq.chat.completions.create({
-        model: "openai/gpt-oss-120b",
-        messages: [
-              {
-              role: "user",
-              content: prompt,
-            },
-        ],
+    model: "openai/gpt-oss-120b",
+    messages: [
+        {
+            role: "user",
+            content: prompt,
+        },
+    ],
+    response_format: {
+        type: "json_object",
+    },
+    max_completion_tokens: 12000,
 });
 
 const output = response.choices[0].message.content;
