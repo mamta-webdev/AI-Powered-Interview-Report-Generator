@@ -77,7 +77,6 @@ const Home = () => {
      </main>
     )
   }
- console.log("Reports:", reports);
   return (
     <main className="home">
       <section className="home__container">
