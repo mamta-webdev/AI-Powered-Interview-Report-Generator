@@ -110,7 +110,7 @@ Self Description: ${selfDescription}
 Job Description: ${jobDescription}
 `
     const response = await groq.chat.completions.create({
-        model: "groq/compound-mini",
+        model: "openai/gpt-oss-120b",
         messages: [
               {
               role: "user",
