@@ -40,7 +40,6 @@ const Home = () => {
     });
 
     if (!data || !data._id) {
-      console.error("Invalid response:", data);
       return;
     }
 
