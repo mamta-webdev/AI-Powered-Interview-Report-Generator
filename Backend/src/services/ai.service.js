@@ -125,7 +125,7 @@ Job Description: ${jobDescription}
 
 const output = response.choices[0].message.content;
 
-console.log("RAW RESPONSE:\n", output);
+// console.log("RAW RESPONSE:\n", output);
 
 const cleanedOutput = output
   .replace(/```json/g, "")
@@ -135,9 +135,9 @@ const cleanedOutput = output
 const data = JSON.parse(cleanedOutput);
 
 // ✅ USE data
-console.log(data.preparationPlan[0].tasks);
+// console.log(data.preparationPlan[0].tasks);
 
-console.log(JSON.stringify(data, null, 2));
+// console.log(JSON.stringify(data, null, 2));
 
 return data;
 }
@@ -261,7 +261,7 @@ ${jobDescription}
 
   } catch (error) {
 
-    console.error("Resume Generation Error:", error);
+    // console.error("Resume Generation Error:", error);
 
     if (error.status === 429) {
       throw new Error(
