@@ -48,8 +48,6 @@ export default function Profile() {
   const navigate = useNavigate();
   const [reports, setReports] = useState([]);
   const { user, handleLogOut } = useAuth();
-
-  console.log("USER DATA =", user);
   
    useEffect(() => {
   const fetchReports = async () => {
@@ -57,15 +55,15 @@ export default function Profile() {
       const data = await getAllInterviewReports();
       setReports(data.interviewReports || []);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   };
 
   fetchReports();
 }, []);
 
-  console.log("REPORTS =", reports);
-  console.log("FIRST REPORT =", reports[0]);
+  // console.log("REPORTS =", reports);
+  // console.log("FIRST REPORT =", reports[0]);
 
   const initials = user?.username
     ? user.username.slice(0, 2).toUpperCase()
@@ -94,9 +92,6 @@ export default function Profile() {
 
   const latestReport = reports[0];
   const skillGaps = latestReport?.skillGap || [];
-
- console.log("LATEST REPORT =", latestReport);
- console.log("SKILL GAPS =", skillGaps);
 
  const getSkillRecommendation = (skillName) => {
   const skill = skillName.toLowerCase();
